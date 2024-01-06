@@ -1,1 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('./assets/design/bg-desktop-light.jpg'); /* Adjust the path based on your folder structure */
+    background-size: cover ; /* or 'contain' based on your preference */
+    background-position: center;
+    background-repeat: no-repeat;
+    
+  }
+  
