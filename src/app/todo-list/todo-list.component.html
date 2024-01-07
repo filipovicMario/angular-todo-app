@@ -1,3 +1,21 @@
-<div class="todo-list">
-    
+<div class="todos-container">
+    <!-- checks if taskList has items, then displays the tasks -->
+    <div *ngIf="taskList.length > 0" class="todo-list">
+        <div *ngFor="let task of taskList">
+            <ul>
+                <li>{{ task }}</li>
+                
+            </ul>
+        </div>
+        
+    </div>
+    <div class="todo-list-footer">
+        <p>0 Items Left</p>
+        <div class="filtering-buttons">
+            <p>All</p>
+            <p>Active</p>
+            <p>Completed</p>
+        </div>
+        <p>Clear completed</p>
+    </div>
 </div>

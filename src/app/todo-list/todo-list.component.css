@@ -1,0 +1,29 @@
+.todos-container {
+    margin-top: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid red;
+    
+}
+
+/* for EXAMPLE TASKS */
+.todo-list p{
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    border: 5px solid green;
+    padding: 10px;
+    
+}
+
+.todo-list-footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+}
+

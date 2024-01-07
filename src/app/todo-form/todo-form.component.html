@@ -1,6 +1,23 @@
-<div class="new-todo-form">
-    <form action="">
-        <input type="text" placeholder="Create a new todo...">
-        <button type="submit">create todo</button>
-    </form>
+<div class="input-form-container">
+    <div class="new-todo-form">
+        <!-- circle in front of new task input -->
+        <div class="circle"></div>
+        <!--  -->
+        <form action="">
+            <input 
+            [(ngModel)] = "newTask"
+            name = "newTask"
+            class="input-field" 
+            type="text" 
+            placeholder="Create a new todo...">
+            <button 
+            type="submit"
+            (click)="addNewTask()"
+            
+            >create todo</button>
+        </form>
+    </div>
+</div>
+<div>
+    <app-todo-list [taskList]="allTasks"></app-todo-list>
 </div>

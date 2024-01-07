@@ -1,10 +1,43 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-weight: 400;
+}
+
+
+
 body {
-    margin: 0;
-    padding: 0;
-    background-image: url('./assets/design/bg-desktop-light.jpg'); /* Adjust the path based on your folder structure */
-    background-size: cover ; /* or 'contain' based on your preference */
-    background-position: center;
-    background-repeat: no-repeat;
-    
-  }
-  
+  margin: 0;
+  padding: 0;
+  background-image: url('./assets/design/bg-desktop-light.jpg');
+  /* Adjust the path based on your folder structure */
+  background-size: cover;
+  /* or 'contain' based on your preference */
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
