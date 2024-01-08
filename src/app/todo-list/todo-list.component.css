@@ -1,23 +1,35 @@
 .todos-container {
-    margin-top: 15px;
+    max-width: 620px;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     border: 1px solid red;
+    margin: 0px auto 0px auto;
     
 }
 
 /* for EXAMPLE TASKS */
-.todo-list p{
+.todo-list{
     width: 100%;
-    align-items: center;
-    justify-content: space-around;
     width: 100%;
     border: 5px solid green;
-    padding: 10px;
+    padding: 10px 5px;
     
+    
+}
+
+.new-todo {
+    width: 100%;
+    color: hsl(235, 19%, 35%);
+    background-color: white;
+    border: 1px solid grey;
+    height: 50px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    padding: 14px 10px 10px 50px;
+    list-style-type: none;
 }
 
 .todo-list-footer {
