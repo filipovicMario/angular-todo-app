@@ -3,19 +3,32 @@
     <div *ngIf="taskList.length > 0" class="todo-list">
         <div *ngFor="let task of taskList">
             <ul>
-                <li class="new-todo">{{ task }}</li>
+                <li class="new-todo"> 
+                    <span class="task-check-mark"></span>
+                    {{ task }} 
+                    <span class="task-delete"></span>
+                </li>
+                
                 
             </ul>
         </div>
         
     </div>
     <div class="todo-list-footer">
-        <p>0 Items Left</p>
+
+        <div class="items-left">
+            <p>{{taskList.length}} Items Left</p>
+        </div>
+        
         <div class="filtering-buttons">
             <p>All</p>
             <p>Active</p>
             <p>Completed</p>
         </div>
-        <p>Clear completed</p>
+
+        <div class="clear-completed">
+            <p>Clear completed</p>
+        </div>
+        
     </div>
 </div>

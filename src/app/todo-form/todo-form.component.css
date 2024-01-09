@@ -3,19 +3,20 @@
     max-width: 600px;
     width: 100%;   
     margin: 50px auto 0px auto;
-    border: 5px solid green;
+    
 }
 
-.input-field {
+.input-field, input-field:active, .input-field:focus {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    outline: none;
     width: 100%;
     color: hsl(235, 19%, 35%);
     box-shadow: 2px 2px 2px grey;
     border: none;
     height: 50px;
-    border-radius: 5px;
+    border-radius: 3px;
     padding: 10px;
     font-size: 1.2rem;
     padding-left: 50px;

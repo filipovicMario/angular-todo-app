@@ -12,13 +12,10 @@
     justify-content: space-between;
 }
 
-.todo-header img {
-    width: 30px;
+.todo-header > img {
     height: 30px;
-    object-fit: cover;
-    cursor: pointer;
+    width: 30px;
 }
-
 
 
 h1 {
