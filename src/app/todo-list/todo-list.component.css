@@ -27,6 +27,15 @@
     list-style-type: none;
 }
 
+.task-check-mark img {
+    height: 25px;
+    width: 23px;
+    position: absolute;
+    cursor: pointer;
+    margin-left: -35px;
+    padding-bottom: 3px;
+}
+
 .todo-list-footer {
     max-width: 600px;
     width: 100%;

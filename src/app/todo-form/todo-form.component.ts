@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Task } from '../constants/task.interface';
 
 @Component({
   selector: 'app-todo-form',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./todo-form.component.css']
 })
 export class TodoFormComponent implements OnInit {
-  allTasks: string[] = [];
+  allTasks: Task[] = [];
   newTask: string = '';
 
   constructor(){}
@@ -18,7 +19,11 @@ export class TodoFormComponent implements OnInit {
   // checks if input is empty, then adds new task to the array, and resets newTask
   addNewTask() {
     if (this.newTask.trim() !== '') {
-      this.allTasks.push(this.newTask);
+      const newTask: Task = {
+        name: this.newTask,
+        completed: false
+      }
+      this.allTasks.push(newTask);
       this.newTask = '';
     }
   }
