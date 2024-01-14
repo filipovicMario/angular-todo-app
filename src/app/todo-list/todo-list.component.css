@@ -27,7 +27,7 @@
     list-style-type: none;
 }
 
-.task-check-mark img {
+.task-check-mark {
     height: 25px;
     width: 23px;
     position: absolute;
@@ -61,5 +61,9 @@
     justify-content: space-around;
     gap: 15px;
     cursor: pointer;
+}
+
+.completed {
+    text-decoration: line-through;
 }
 

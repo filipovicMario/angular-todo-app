@@ -3,19 +3,16 @@
     <div *ngIf="taskList.length > 0" class="todo-list">
         <div *ngFor="let task of taskList">
             <ul>
-
                 <!-- new todo, could make this into its own component probably -->
-                <li class="new-todo" > 
-                    <span class="task-check-mark"> <img src="assets/check.png" alt=""> </span>
-                    {{ task.name }} 
+                <li class="new-todo" [class.completed]="task.completed"> 
+                    <img class="task-check-mark" src="assets/check.png" (click)="toggleCompleted(task)">
+                    {{ task.name }}
                     <span class="task-delete"></span>
-                </li>
-                
-                
+                </li>  
             </ul>
-        </div>
-        
+        </div>   
     </div>
+    
     <div class="todo-list-footer">
 
         <div class="items-left">
