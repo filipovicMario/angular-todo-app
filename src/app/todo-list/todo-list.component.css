@@ -63,6 +63,10 @@
     cursor: pointer;
 }
 
+.clear-completed {
+    cursor: pointer;
+}
+
 .completed {
     text-decoration: line-through;
 }

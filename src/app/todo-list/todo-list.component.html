@@ -1,7 +1,33 @@
 <div class="todos-container">
     <!-- checks if taskList has items, then displays the tasks -->
-    <div *ngIf="taskList.length > 0" class="todo-list">
+    <div *ngIf="activeFilter==='all'" class="todo-list">
         <div *ngFor="let task of taskList">
+            <ul>
+                <!-- new todo, could make this into its own component probably -->
+                <li class="new-todo" [class.completed]="task.completed"> 
+                    <img class="task-check-mark" src="assets/check.png" (click)="toggleCompleted(task)">
+                    {{ task.name }}
+                    <span class="task-delete"></span>
+                </li>  
+            </ul>
+        </div>   
+    </div>
+
+    <div *ngIf="activeFilter==='active'" class="todo-list">
+        <div *ngFor="let task of unCompletedTasks">
+            <ul>
+                <!-- new todo, could make this into its own component probably -->
+                <li class="new-todo" [class.completed]="task.completed"> 
+                    <img class="task-check-mark" src="assets/check.png" (click)="toggleCompleted(task)">
+                    {{ task.name }}
+                    <span class="task-delete"></span>
+                </li>  
+            </ul>
+        </div>   
+    </div>
+
+    <div *ngIf="activeFilter==='completed'" class="todo-list">
+        <div *ngFor="let task of completedTasks">
             <ul>
                 <!-- new todo, could make this into its own component probably -->
                 <li class="new-todo" [class.completed]="task.completed"> 
@@ -16,17 +42,17 @@
     <div class="todo-list-footer">
 
         <div class="items-left">
-            <p>{{taskList.length}} Items Left</p>
+            <p>{{unCompletedTasks.length}} Items Left</p>
         </div>
         
         <div class="filtering-buttons">
-            <p>All</p>
-            <p>Active</p>
-            <p>Completed</p>
+            <p (click)="updateFilter('all')" [ngClass]="{'active': activeFilter === 'all'}">All</p>
+            <p (click)="updateFilter('active')" [ngClass]="{'active': activeFilter === 'active'}">Active</p>
+            <p (click)="updateFilter('completed')" [ngClass]="{'active': activeFilter === 'completed'}">Completed</p>
         </div>
 
         <div class="clear-completed">
-            <p>Clear completed</p>
+            <p (click)="deleteCompletedTasks()">Clear completed</p>
         </div>
         
     </div>

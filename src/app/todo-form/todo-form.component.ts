@@ -10,7 +10,12 @@ export class TodoFormComponent implements OnInit {
   allTasks: Task[] = [];
   newTask: string = '';
 
+  completedTasks: Task[] = [];
+
+  unCompletedTasks: Task[] = [];
+
   constructor(){}
+  
 
   ngOnInit(): void {
     
@@ -24,6 +29,7 @@ export class TodoFormComponent implements OnInit {
         completed: false
       }
       this.allTasks.push(newTask);
+      this.unCompletedTasks.push(newTask);
       this.newTask = '';
     }
   }
