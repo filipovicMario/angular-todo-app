@@ -31,7 +31,6 @@ export class TodoListComponent implements OnInit {
   //changes the completed boolean of task to whatever it currently is not
   toggleCompleted(task: Task) {
     task.completed = !task.completed;
-    this.filterCompletedTasks();
     this.filterUnCompletedTasks();
   }
 
@@ -45,6 +44,7 @@ export class TodoListComponent implements OnInit {
   deleteCompletedTasks() {
     this.taskList = this.taskList.filter(task => task.completed === false);
     this.completedTasks = [];
+    this.filterUnCompletedTasks();
     
     
     
