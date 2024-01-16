@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Task } from '../constants/task.interface';
+import { Task } from '../shared/task.interface';
 
 @Component({
   selector: 'app-todo-form',
@@ -9,6 +9,7 @@ import { Task } from '../constants/task.interface';
 export class TodoFormComponent implements OnInit {
   allTasks: Task[] = [];
   newTask: string = '';
+  
 
   completedTasks: Task[] = [];
 
