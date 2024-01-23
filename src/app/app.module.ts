@@ -7,6 +7,7 @@ import { HeaderComponent } from './header/header.component';
 
 import { TodoListComponent } from './todo-list/todo-list.component';
 import { TodoFormComponent } from './todo-form/todo-form.component';
+import { TaskItemComponent } from './task-item/task-item.component';
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import { TodoFormComponent } from './todo-form/todo-form.component';
     HeaderComponent,
     TodoListComponent,
     TodoFormComponent,
+    TaskItemComponent,
     
   ],
   imports: [

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Task } from '../shared/task.interface';
+import { TaskService } from '../shared/task.service';
 
 @Component({
   selector: 'app-todo-form',
@@ -7,20 +8,12 @@ import { Task } from '../shared/task.interface';
   styleUrls: ['./todo-form.component.css']
 })
 export class TodoFormComponent implements OnInit {
-  allTasks: Task[] = [];
   newTask: string = '';
+
+  constructor(private taskService: TaskService){}
   
 
-  completedTasks: Task[] = [];
-
-  unCompletedTasks: Task[] = [];
-
-  constructor(){}
-  
-
-  ngOnInit(): void {
-    
-  }
+  ngOnInit(): void {}
 
   // checks if input is empty, then adds new task to the array, and resets newTask
   addNewTask() {
@@ -28,9 +21,8 @@ export class TodoFormComponent implements OnInit {
       const newTask: Task = {
         name: this.newTask,
         completed: false
-      }
-      this.allTasks.push(newTask);
-      this.unCompletedTasks.push(newTask);
+      };
+      this.taskService.addTask(newTask);
       this.newTask = '';
     }
   }
