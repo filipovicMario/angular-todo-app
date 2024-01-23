@@ -15,13 +15,13 @@
     <div class="todo-list-footer">
 
         <div class="items-left">
-            <p>{{taskService.getUncompletedTasks.length}} Items Left</p>
+            <p>{{taskService.getUncompletedTasks().length}} Items Left</p>
         </div>
         
-        <div class="filtering-buttons">
-            <p (click)="updateFilter('all')" [ngClass]="{'active': activeFilter === 'all'}">All</p>
-            <p (click)="updateFilter('active')" [ngClass]="{'active': activeFilter === 'active'}">Active</p>
-            <p (click)="updateFilter('completed')" [ngClass]="{'active': activeFilter === 'completed'}">Completed</p>
+        <div class="filtering-buttons-tab">
+            <p class="filter-button" (click)="updateFilter('all')" [ngClass]="{'active': activeFilter === 'all'}">All</p>
+            <p class="filter-button" (click)="updateFilter('active')" [ngClass]="{'active': activeFilter === 'active'}">Active</p>
+            <p class="filter-button" (click)="updateFilter('completed')" [ngClass]="{'active': activeFilter === 'completed'}">Completed</p>
         </div>
 
         <div class="clear-completed">

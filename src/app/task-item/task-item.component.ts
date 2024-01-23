@@ -18,4 +18,8 @@ export class TaskItemComponent {
   onToggleCompleted() {
     this.taskService.toggleCompleted(this.task);
   }
+
+  onDeleteTask() {
+    this.taskService.deleteTask(this.task)
+  }
 }

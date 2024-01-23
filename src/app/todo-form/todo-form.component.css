@@ -2,8 +2,7 @@
     margin-top: 50px;
     max-width: 600px;
     width: 100%;   
-    margin: 50px auto 0px auto;
-    
+    margin: 50px auto 0px auto;   
 }
 
 .input-field, input-field:active, .input-field:focus {
@@ -18,19 +17,16 @@
     height: 50px;
     border-radius: 3px;
     padding: 10px;
-    font-size: 1.2rem;
+    font-size: 18px;
     padding-left: 50px;
-
 }
 
 .circle {
-    border: 1px solid hsl(233, 11%, 84%);
-    border-radius: 50%;
-    height: 25px;
-    width: 25px;
+    height: 24px;
+    width: 24px;
     position: absolute;
-    margin-top: 12px;
-    margin-left: 12px;
+    margin-top: 13px;
+    margin-left: 13px;
     cursor: pointer;
     
 }

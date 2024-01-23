@@ -16,7 +16,6 @@ export class TodoListComponent implements OnInit {
 
   ngOnInit(): void { }
 
-  //changes the completed boolean of task to whatever it currently is not
   toggleCompleted(task: Task) {
     this.taskService.toggleCompleted(task);
   }

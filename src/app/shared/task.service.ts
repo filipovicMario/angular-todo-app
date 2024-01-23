@@ -29,7 +29,7 @@ export class TaskService {
     }
 
     deleteCompletedTasks(): void {
-        this.allTasks = this.allTasks.filter((task) => task.completed === false);
+        this.allTasks = this.unCompletedTasks;
         this.completedTasks = [];
         this.filterTasks();
     }

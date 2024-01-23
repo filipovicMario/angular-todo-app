@@ -1,8 +1,7 @@
 <ul>
-    <li class="new-todo" [class.completed]="task.completed"> 
-      <img class="task-check-mark" src="assets/check.png" (click)="onToggleCompleted()">
-      {{ task.name }}
-      <img class="task-delete" >
-    </li>
-  </ul>
-  
+  <li class="new-todo" [class.completed]="task.completed === true">
+    <img class="task-check-mark" [src]="task.completed ? 'assets/check.png' : 'assets/circle.png'" (click)="onToggleCompleted()">
+    <span class="task-name">{{ task.name }}</span>
+    <img class="task-delete" src="assets/x-mark.png" (click)="onDeleteTask()">
+  </li>
+</ul>

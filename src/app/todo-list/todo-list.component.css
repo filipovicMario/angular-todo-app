@@ -5,8 +5,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin: 0px auto 0px auto;
-    
+    margin: 0px auto 0px auto;  
 }
 
 /* for EXAMPLE TASKS */
@@ -14,10 +13,6 @@
     width: 100%;
     padding: 10px 5px 0px 5px; 
 }
-
-
-
-
 
 .todo-list-footer {
     max-width: 600px;
@@ -38,12 +33,21 @@
     font-size: 1rem;
 }
 
-.filtering-buttons {
+.filtering-buttons-tab {
     display: flex;
     align-items: center;
     justify-content: space-around;
     gap: 15px;
     cursor: pointer;
+}
+
+.filter-button.active {
+    color: hsl(220, 98%, 61%);
+    font-weight: 700;
+}
+
+.filter-button:hover {
+    color: hsl(220, 98%, 61%);
 }
 
 .clear-completed {
